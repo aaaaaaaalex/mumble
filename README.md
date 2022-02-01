@@ -1,3 +1,17 @@
+### Mumble v1.4.something For The M1 Mac...
+includes a CELT typedef patch that will allow building
+
+#### The Rough Build Steps I Followed (mainly intended for my own machine if I need to build this again in the future)
+
+ - clone
+ - `git submodule update --init --recursive
+ - `mkdir build`
+ - install rest of the doumented build steps
+ - use OpenSSL1.1 and QT5.15
+ - run `cmake -DOPENSSL_ROOT_DIR=/opt/homebrew/Cellar/openssl@1.1/1.1.1m  -DCMAKE_PREFIX_PATH=/opt/homebrew/Cellar/qt@5/5.15.2_1 -Wno-error=deprecated -Wno-error=deprecated-declarations -Dice=OFF -Dclient=ON -DOPUS_DISABLE_INTRINSICS=ON ..``
+ - might be able to build with OpenSSL3 if you use the right warning config options (i dont know make / cmake well enough)
+ - make -j9
+
 ![Mumble screenshot](screenshots/Mumble.png)
 
 # Mumble - Open Source voice-chat software 
