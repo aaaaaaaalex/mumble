@@ -4,7 +4,7 @@ includes a CELT typedef patch that will allow building
 #### The Rough Build Steps I Followed (mainly intended for my own machine if I need to build this again in the future)
 
  - clone
- - `git submodule update --init --recursive
+ - `git submodule update --init --recursive`
  - `mkdir build`
  - install rest of the doumented build steps
  - use OpenSSL1.1 and QT5.15
